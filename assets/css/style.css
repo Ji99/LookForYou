@@ -2,6 +2,7 @@
   --font-size-75: 0.75rem;
   --font-size-1: 1rem;
 }
+
 * {
   font-family: "Nanum Gothic", sans-serif;
 }
@@ -19,25 +20,35 @@ body {
 .hidden {
   display: none;
 }
+
+.hideNavSection {
+  transform: translateX(-240px);
+}
 /* ====== header ====== */
 
 .header {
-  display: flex;
+  position: fixed;
+  background-color: aqua;
+  display: block;
   width: 100%;
   height: 2rem;
-  align-items: center;
   margin-top: 10px;
   padding: 5px;
 }
-
-.header__name {
-  margin-left: 110px;
-}
-/* ====== select menuList ====== */
-.select__container {
+.header__container {
+  display: flex;
   height: 100%;
 }
+
+.header__name {
+  height: 100%;
+  width: 20%;
+  margin: 0;
+}
+
+/* ====== select menuList ====== */
 .select__menuList {
+  width: 80%;
   margin: 0;
   padding-left: 0%;
   margin-bottom: 15px;
@@ -61,20 +72,23 @@ body {
 /* ====== Nav Menu ====== */
 
 .section__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   width: 250px;
   height: 450px;
-  position: absolute;
   top: 15%;
   z-index: 5;
+  color: white;
 }
 
 .nav__container {
   box-sizing: border-box;
   width: 240px;
   height: 100%;
-  background: rgba(167, 157, 167, 0.8);
+  background: rgba(37, 36, 37, 0.8);
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
@@ -84,7 +98,7 @@ body {
   height: 300px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  background: rgba(167, 157, 167, 0.9);
+  background: rgba(37, 36, 37, 0.9);
 }
 /* ====== User Profile ====== */
 
