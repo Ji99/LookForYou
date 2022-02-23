@@ -5,23 +5,29 @@ const navContainer = document.querySelector(".nav__container");
 let startPos = 0;
 let endPos = 0;
 let curPos = 0;
-
+let offset = 0;
 navBar.addEventListener("touchstart", handleStart);
 navBar.addEventListener("touchmove", handleMove);
 navBar.addEventListener("touchend", handleEnd);
 
-function handleStart(evt){
-    startPos = evt.changedTouches[0];
-    console.log("startPos: ",startPos);
+function handleStart(evt) {
+  startPos = evt.changedTouches[0].pageX;
+  curPos = startPos;
+  console.log("startPos: ", startPos);
 }
 
-function handleMove(evt){
-    curPos = evt.changedTouches[0];
-    if(curPos > startPos){
-        
-    }
+function handleMove(evt) {
+  console.log("curPos: ", curPos);
+  curPos = evt.changedTouches[0].pageX;
+  offset = -240 + curPos;
+  sectionNav.style.transform = `translateX(${offset}px)`;
 }
 
-function handleEnd(evt){
-
+function handleEnd(evt) {
+  endPos = evt.changedTouches[0].pageX;
+  if (endPos > 120) {
+    sectionNav.style.transform = "translateX(0)";
+  } else {
+    sectionNav.style.transform = "translateX(-240px)";
+  }
 }
