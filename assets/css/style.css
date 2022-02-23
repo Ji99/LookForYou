@@ -87,7 +87,7 @@ body {
   z-index: 5;
   color: white;
   transform: translateX(-240px);
-  transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.6s;
 }
 
 .nav__container {

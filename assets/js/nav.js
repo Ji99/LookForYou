@@ -20,7 +20,11 @@ function handleMove(evt) {
   console.log("curPos: ", curPos);
   curPos = evt.changedTouches[0].pageX;
   offset = -240 + curPos;
-  sectionNav.style.transform = `translateX(${offset}px)`;
+  if (offset >= 0) {
+    sectionNav.style.transform = "translateX(0)";
+  } else {
+    sectionNav.style.transform = `translateX(${offset}px)`;
+  }
 }
 
 function handleEnd(evt) {
