@@ -1,5 +1,5 @@
+const sectionNav = document.querySelector(".section__nav");
 const navBar = document.querySelector(".nav__bar");
-
 const navContainer = document.querySelector(".nav__container");
 
 let startPos = 0;
@@ -16,7 +16,10 @@ function handleStart(evt){
 }
 
 function handleMove(evt){
-    curPos
+    curPos = evt.changedTouches[0];
+    if(curPos > startPos){
+        
+    }
 }
 
 function handleEnd(evt){

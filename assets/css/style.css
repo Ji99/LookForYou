@@ -27,12 +27,13 @@ body {
 /* ====== header ====== */
 
 .header {
-  position: fixed;
-  background-color: aqua;
+  position: sticky;
+  position: -webkit-sticky;
   display: block;
   width: 100%;
   height: 2rem;
   margin-top: 10px;
+
   padding: 5px;
 }
 .header__container {
@@ -160,7 +161,9 @@ body {
 }
 
 /* ====== UserStory ====== */
-
+.user__story {
+  display: block;
+}
 .user__story-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
