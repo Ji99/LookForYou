@@ -218,7 +218,7 @@ body {
   .section__nav{
     width: 480px;
     height: 600px;
-    transform: translateX(-480px);
+    transform: translateX(-460px);
   }
 
   .nav__container{

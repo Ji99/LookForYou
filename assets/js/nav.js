@@ -7,7 +7,7 @@ let endPos = 0;
 let curPos = 0;
 let offset = 0;
 
-const deg = getComputedStyle(sectionNav).getPropertyValue("transform").match(/(-?[0-9\.]+)/g)[4];;
+const deg = parseInt(getComputedStyle(sectionNav).getPropertyValue("transform").match(/(-?[0-9\.]+)/g)[4]);
 console.log(deg);
 
 sectionNav.addEventListener("touchstart", handleStart);
@@ -26,7 +26,8 @@ function handleStart(evt) {
 function handleMove(evt) {
   console.log("curPos: ", curPos);
   curPos = evt.changedTouches[0].pageX;
-  offset = -240 + curPos;
+  offset = deg + curPos;
+  console.log("offset: ", offset);
   if (offset >= 0) {
     sectionNav.style.transform = "translateX(0)";
   } else {
@@ -36,14 +37,15 @@ function handleMove(evt) {
 
 function handleEnd(evt) {
   endPos = evt.changedTouches[0].pageX;
-  if (endPos > 120) {
+  console.log("endPos: ",endPos);
+  if (endPos > Math.abs(deg)/2) {
     sectionNav.style.transform = "translateX(0)";
     navBar.classList.add("hidden");
   } else {
-    sectionNav.style.transform = "translateX(-240px)";
+    sectionNav.style.transform = `translateX(-${deg}px)`;
   }
 
-  if (endPos >= 230) {
+  if (endPos >= Math.abs(deg) - 20) {
     navBar.classList.add("hidden");
   }
 }
