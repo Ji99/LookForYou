@@ -6,9 +6,9 @@ let startPos = 0;
 let endPos = 0;
 let curPos = 0;
 let offset = 0;
-navBar.addEventListener("touchstart", handleStart);
-navBar.addEventListener("touchmove", handleMove);
-navBar.addEventListener("touchend", handleEnd);
+sectionNav.addEventListener("touchstart", handleStart);
+sectionNav.addEventListener("touchmove", handleMove);
+sectionNav.addEventListener("touchend", handleEnd);
 
 function handleStart(evt) {
   startPos = evt.changedTouches[0].pageX;
