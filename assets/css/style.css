@@ -24,6 +24,9 @@ body {
   display: none;
 }
 
+.hide{
+
+}
 /* ====== header ====== */
 
 .header {
@@ -33,7 +36,6 @@ body {
   width: 100%;
   height: 2rem;
   margin-top: 10px;
-
   padding: 5px;
 }
 .header__container {
@@ -76,8 +78,7 @@ body {
 
 .section__nav {
   position: fixed;
-  top: 0;
-  left: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   width: 250px;
@@ -99,7 +100,7 @@ body {
 }
 
 .nav__bar {
-  width: 5px;
+  width: 8px;
   height: 300px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -168,6 +169,7 @@ body {
 .user__story {
   display: block;
 }
+
 .user__story-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -186,4 +188,45 @@ body {
 .user__story-container div img {
   width: 100%;
   height: 100%;
+}
+
+/* ====== Reposive ====== */
+
+/* Dimensions: iPad Mini */
+@media screen and (min-width: 768px) {
+
+  /* ====== header ====== */
+  .header{
+    height: 2.5rem;
+  }
+  .select__menuList li{
+    font-size: 18px;
+  }
+
+  .header__name{
+    font-size: 2rem;
+  }
+
+  /* ====== user story ====== */
+  .user__story-container div[class^="userStory"]{
+    width: 376px;
+    height: 546px;
+  }
+
+  /* ====== nav ====== */
+
+  .section__nav{
+    width: 480px;
+    height: 600px;
+    transform: translateX(-480px);
+  }
+
+  .nav__container{
+    width: 460px;
+  }
+  .nav__bar{
+    width: 12px;
+  }
+
+  
 }
