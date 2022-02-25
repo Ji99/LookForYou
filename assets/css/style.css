@@ -80,7 +80,7 @@ body {
   z-index: 1;
   display: flex;
   align-items: center;
-  width: 250px;
+  width: 280px;
   height: 450px;
   top: 15%;
   z-index: 5;
@@ -103,7 +103,7 @@ body {
   height: 300px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  background: rgba(37, 36, 37, 0.9);
+  background: rgba(37, 36, 37, 0.8);
 }
 /* ====== User Profile ====== */
 

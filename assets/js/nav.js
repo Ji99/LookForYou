@@ -18,15 +18,19 @@ console.log(deg);
 sectionNav.addEventListener("touchstart", handleStart);
 sectionNav.addEventListener("touchmove", handleMove);
 sectionNav.addEventListener("touchend", handleEnd);
+sectionNav.addEventListener("click", navOpen);
 
+function navOpen() {
+  sectionNav.style.transform = `translateX(0px)`;
+  if (!sectionNav.classList.contains("hidden")) {
+    navBar.classList.add("hidden");
+  }
+}
 //Touch Start
 function handleStart(evt) {
   startPos = evt.changedTouches[0].pageX; //터치 시작 좌표
   curPos = startPos;
   console.log("startPos: ", startPos);
-  if (navBar.classList.contains("hidden")) {
-    navBar.classList.remove("hidden");
-  }
 }
 // Touch ing....~
 function handleMove(evt) {
@@ -52,5 +56,8 @@ function handleEnd(evt) {
     navBar.classList.add("hidden");
   } else {
     sectionNav.style.transform = `translateX(${deg}px)`;
+    if (navBar.classList.contains("hidden")) {
+      navBar.classList.remove("hidden");
+    }
   }
 }
