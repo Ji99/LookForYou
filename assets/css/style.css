@@ -24,8 +24,7 @@ body {
   display: none;
 }
 
-.hide{
-
+.hide {
 }
 /* ====== header ====== */
 
@@ -194,39 +193,54 @@ body {
 
 /* Dimensions: iPad Mini */
 @media screen and (min-width: 768px) {
-
   /* ====== header ====== */
-  .header{
+  .header {
     height: 2.5rem;
   }
-  .select__menuList li{
+  .select__menuList li {
     font-size: 18px;
   }
 
-  .header__name{
+  .header__name {
     font-size: 2rem;
   }
 
   /* ====== user story ====== */
-  .user__story-container div[class^="userStory"]{
+  .user__story-container div[class^="userStory"] {
     width: 376px;
     height: 546px;
   }
 
   /* ====== nav ====== */
 
-  .section__nav{
+  .section__nav {
     width: 480px;
     height: 600px;
     transform: translateX(-460px);
   }
 
-  .nav__container{
+  .nav__container {
     width: 460px;
   }
-  .nav__bar{
+  .nav__bar {
     width: 12px;
   }
 
-  
+  /* ====== profile ====== */
+  .user__profile-img {
+    width: 120px;
+    height: 120px;
+  }
+  #user-name {
+    font-size: 1.5rem;
+  }
+
+  #user-interest {
+    font-size: 1.2rem;
+  }
+
+  .profile__nav-list li {
+    width: 60%;
+    font-size: 1.5rem;
+  }
 }
